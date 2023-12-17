@@ -3,9 +3,7 @@
   "version": "0.8.2",
   "description": "create interaqt app command line tool",
   "main": "script/create.js",
-  "bin": {
-    "create-interaqt-app": "script/create.js"
-  },
+  "bin": "script/create.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +13,8 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
