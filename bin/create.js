@@ -1,3 +1,4 @@
+#!/usr/bin/node
 import {program} from "commander";
 import {execSync} from 'child_process'
 import chalk from 'chalk'
