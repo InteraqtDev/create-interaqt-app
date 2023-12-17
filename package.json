@@ -1,6 +1,6 @@
 {
   "name": "create-interaqt-app",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "create interaqt app command line tool",
   "main": "script/create.js",
   "bin": {
