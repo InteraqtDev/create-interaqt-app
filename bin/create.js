@@ -15,8 +15,8 @@ program
       console.log(chalk.red(`folder ${folder} already exists`))
       return
     }
-    console.log(chalk.green(`cloning template from git@github.com:InteraqtDev/interaqt-app-boilerplate.git`))
-    await execSync(`git clone git@github.com:InteraqtDev/interaqt-app-boilerplate.git ${folder}`, {stdio: 'inherit'})
+    console.log(chalk.green(`cloning template from https://github.com/InteraqtDev/interaqt-app-boilerplate.git`))
+    await execSync(`git clone https://github.com/InteraqtDev/interaqt-app-boilerplate.git ${folder}`, {stdio: 'inherit'})
     await process.chdir(`${folder}`)
     console.log(chalk.green('running install script'))
     await execSync('npm install', {stdio: 'inherit'})
