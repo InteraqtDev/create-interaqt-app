@@ -7,7 +7,7 @@ import chalk from 'chalk'
 import {existsSync} from 'fs'
 
 program
-  .version('0.8.0')
+  .version('0.8.7')
   .argument('<folder>', 'folder to create app')
   .action(async (folder,) => {
     console.log(chalk.bgCyan.black('create interaqt app'))
@@ -18,6 +18,7 @@ program
     console.log(chalk.green(`cloning template from https://github.com/InteraqtDev/interaqt-app-boilerplate.git`))
     await execSync(`git clone https://github.com/InteraqtDev/interaqt-app-boilerplate.git ${folder}`, {stdio: 'inherit'})
     await process.chdir(`${folder}`)
+    await execSync('rm -rf .git', {stdio: 'inherit'})
     console.log(chalk.green('running install script'))
     await execSync('npm install', {stdio: 'inherit'})
 
