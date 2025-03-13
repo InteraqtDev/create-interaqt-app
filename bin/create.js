@@ -19,8 +19,11 @@ program
     await execSync(`git clone https://github.com/InteraqtDev/interaqt-app-boilerplate.git ${folder}`, {stdio: 'inherit'})
     await process.chdir(`${folder}`)
     await execSync('rm -rf .git', {stdio: 'inherit'})
-    console.log(chalk.green('running install script'))
+    console.log(chalk.green('install dependencies'))
     await execSync('npm install', {stdio: 'inherit'})
+
+    console.log(chalk.green('running setup script'))
+    await execSync('npm run setup', {stdio: 'inherit'})
 
     await process.chdir(`dashboard`)
     console.log(chalk.green('running dashboard install script'))
